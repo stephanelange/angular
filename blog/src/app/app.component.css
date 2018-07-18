@@ -1,0 +1,16 @@
+.container {
+    display: grid;
+    grid-template-columns: 10px 2fr 10px;
+    gap: 10px;
+}
+
+.titre {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0.5em;
+}
+
+.content {
+    grid-column: 2/3;
+    grid-row: 2;
+}

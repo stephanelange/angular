@@ -1,0 +1,10 @@
+<div class="container">
+    <h1 class=titre>
+        {{ title }}
+    </h1>
+
+    <div class="content">
+        <!-- passage du tableau des posts à app-post-list.component-->
+        <app-post-list [tabPosts]='postsList'> </app-post-list>
+    </div>
+</div>

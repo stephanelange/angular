@@ -1,0 +1,17 @@
+<!-- Ajuste la couleur groupe list bootstrap en fionction du nombre de loveIts -->
+<div [ngClass]="{'list-group-item': true,'list-group-item-success': post.loveIts > 0,
+                'list-group-item-danger': post.loveIts < 0}">
+    <!-- Ma grille pour positionner les différents éléments -->
+    <div class="container">
+        <!-- Ajuste la couleur du titre en fonction du nombre de loveIts -->
+        <div [class.titre-success]="post.loveIts > 0" [class.titre-danger]="post.loveIts < 0" [class.titre]="post.loveIts == 0">
+            {{post.title}}</div>
+        <!-- Affichage de la date en short -->
+        <div class="jourHeure">{{post.created_at | date: 'short'}}</div>
+        <!-- Affichage du contenu du post -->
+        <div class="contenu">{{post.content}}</div>
+        <!-- Les 2 boutons qui gèrent les nombre de loveIts -->
+        <button class="btn-love btn-success" (click)="onLove(post)">Love it!</button>
+        <button class="btn-dont btn-danger" (click)="onDontLove(post)">Don't Love it!</button>
+    </div>
+</div>
