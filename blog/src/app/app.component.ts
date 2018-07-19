@@ -11,11 +11,5 @@ import { TABPOSTS } from './mock-posts';
 
 export class AppComponent {
   title = 'Posts';
-  updateDate = new Date();
   postsList = TABPOSTS;
-
-  constructor() { }
-
-  // tslint:disable-next-line:use-life-cycle-interface
-  ngOnInit() { }
 }
