@@ -29,6 +29,7 @@ export class AppComponent {
     );
   }
 
+  // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit() {
     this.appareils = this.appareilService.appareils;
   }
@@ -39,7 +40,7 @@ export class AppComponent {
   }
 
   onEteindre() {
-    if(confirm('Etes-vous sûr de vouloir éteindre tous vos appareils ?')) {
+    if (confirm('Etes-vous sûr de vouloir éteindre tous vos appareils ?')) {
       this.appareilService.switchOffAll();
     } else {
       return null;
